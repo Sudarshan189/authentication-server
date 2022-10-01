@@ -1,6 +1,7 @@
 app:
   security:
     jwt:
+      payloadEncryptionKey: test1234567890yt
       privateKey: |
         -----BEGIN PRIVATE KEY-----
         MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBALP7mJXDmfmjk8u8
