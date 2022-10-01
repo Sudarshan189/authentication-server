@@ -1,7 +1,37 @@
 app:
   security:
     jwt:
-      keystore-location: keys/keystore.jks
-      keystore-password: password
-      key-alias: jwtsigning
-      private-key-passphrase: password
+      payloadEncryptionKey: test1234567890yt
+      privateKey: |
+        -----BEGIN PRIVATE KEY-----
+        MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBALP7mJXDmfmjk8u8
+        tMjV3CryJxMggPeOvR+RzHnyekGL1Co/EsyTgSrsyqUhjKBr26TgRkMqcBEJVbPH
+        H3SjOO+NUXkiwxxaLdVOqF2eJw1Nt4BDrWUMVmpNFYZU/L6UJnK8A/yzO+Tb4qCR
+        ryGw0GFQafPdlH6KTM0rcNYOMAQ1AgMBAAECgYAR8x2ckg1hIDc1MnS1Mt7qSYws
+        FCnIhqvF4jyKTOx0bQWT0QaG8I8JQORU46uqtBcLsnJPcIQMrumlLE6uyzh6QL3G
+        /EpnE/lM0batjoVzaZMV+4m79JYZgT4bxRO1x9ya9SFlABtBJhAgXNsEv8JUdVDu
+        D1ZbMXWXCnyLlxWUYQJBAN6kUfVqkqu9Q5jr5oX8T5vo7t56cIVoOjcqLGgXclS2
+        v78n25npBvwSpeRDvpH+39wmE6SRBRV/h19c0R/Bm8cCQQDO8wn0k6Ceccqeuax4
+        3yZjh8UmirXsr5gkCOwhjrQjJGMEheB95XYbTB/FGdsFeUqiHYQW/+22kqh/K0go
+        WogjAkBb+ATjG+L6jnQd91SChHdeMBp8TJeuhB+IKiOt3AGefN84V36fVWNNPWbJ
+        pDJUnLRcfF4g3Mb82nFRM0YvmAqBAkAIYKRNh1BgOaEHLeMCfZ4TN2LOvZzBuRYC
+        l23fqeQ26/kqLLU6w3g1gK5kjzhjj1ZrG6DGQZQA6QzzIPBp2chbAkA2o9AOrD2d
+        BpEsddBGBaEJkzlZgBfM2x/Pil2wYNXo/2VMRoJOcJLyb1ZBtO2xmvcwMDXCJ7Ru
+        FzE8MLopslfq
+        -----END PRIVATE KEY-----
+      publicKey: |
+        -----BEGIN PUBLIC KEY-----
+        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCz+5iVw5n5o5PLvLTI1dwq8icT
+        IID3jr0fkcx58npBi9QqPxLMk4Eq7MqlIYyga9uk4EZDKnARCVWzxx90ozjvjVF5
+        IsMcWi3VTqhdnicNTbeAQ61lDFZqTRWGVPy+lCZyvAP8szvk2+Kgka8hsNBhUGnz
+        3ZR+ikzNK3DWDjAENQIDAQAB
+        -----END PUBLIC KEY-----
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/AUTH_CS
+    username: sudarshan
+    password: Welcome@123
+  jpa:
+    hibernate:
+      ddl-auto: update
